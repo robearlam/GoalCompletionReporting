@@ -3,7 +3,39 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoalCompletionReporting.Business", "GoalCompletionReporting.Business\GoalCompletionReporting.Business.csproj", "{6EE8B2BE-DAEA-4867-841C-48C322100BE0}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "GoalCompletionReporting.Master", "GoalCompletionReporting.Master\GoalCompletionReporting.Master.scproj", "{7CC7D144-B29F-469E-A7A5-49E0B3077ADD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BC6895D4-1D87-4EA4-8D72-656090EA1BAF}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoalCompletionReporting.Web", "GoalCompletionReporting.Web\GoalCompletionReporting.Web.csproj", "{E2453612-90C0-42E1-978C-6A80E014407E}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EE8B2BE-DAEA-4867-841C-48C322100BE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EE8B2BE-DAEA-4867-841C-48C322100BE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EE8B2BE-DAEA-4867-841C-48C322100BE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EE8B2BE-DAEA-4867-841C-48C322100BE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CC7D144-B29F-469E-A7A5-49E0B3077ADD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CC7D144-B29F-469E-A7A5-49E0B3077ADD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CC7D144-B29F-469E-A7A5-49E0B3077ADD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7CC7D144-B29F-469E-A7A5-49E0B3077ADD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CC7D144-B29F-469E-A7A5-49E0B3077ADD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CC7D144-B29F-469E-A7A5-49E0B3077ADD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E2453612-90C0-42E1-978C-6A80E014407E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2453612-90C0-42E1-978C-6A80E014407E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2453612-90C0-42E1-978C-6A80E014407E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2453612-90C0-42E1-978C-6A80E014407E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

@@ -251,5 +251,14 @@ paket-files/
 .idea/
 *.sln.iml
 
+#build assets
+**/bin/**/*.*
+**/obj/**/*.*
+
 #lib folder contents
-lib/*.dll
+lib/**/*.dll
+lib/**/*.xml
+lib/**/*.lic
+lib/**/*.targets
+lib/**/*.exe
+lib/**/*.config
