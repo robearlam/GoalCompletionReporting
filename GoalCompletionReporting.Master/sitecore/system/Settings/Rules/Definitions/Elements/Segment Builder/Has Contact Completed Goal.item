@@ -2,9 +2,9 @@
 version: 1
 id: {EF519567-0B6C-436E-BAE0-4772B8773CCC}
 database: master
-path: /sitecore/system/Settings/Rules/Definitions/Elements/Segment Builder/Goal
+path: /sitecore/system/Settings/Rules/Definitions/Elements/Segment Builder/Has Contact Completed Goal
 parent: {2562A247-05A4-463C-8B8D-80050F139693}
-name: Goal
+name: Has Contact Completed Goal
 master: {00000000-0000-0000-0000-000000000000}
 template: {F0D16EEE-3A05-4E43-A082-795A32B873C0}
 templatekey: Condition
@@ -14,21 +14,21 @@ created: 20160616T042438:636016478783930000
 field: {AB51C8B2-F0E1-4471-9AAE-CC080D774923}
 name: Type
 key: type
-content-length: 112
+content-length: 122
 
-GoalCompletionReporting.Business.Rules.SegmentBuilder.Conditions.GoalCondition, GoalCompletionReporting.Business
+GoalCompletionReporting.Business.Rules.SegmentBuilder.Conditions.HasContactCompletedGoal, GoalCompletionReporting.Business
 ----version----
 language: en
 version: 1
-revision: f07e135d-e299-422c-8a20-8a1ef55ad3cd
+revision: 78948095-7a46-43c4-89c2-b4237a52d3f8
 
 ----field----
 field: {AF321234-4EB9-4EF5-9197-65903351939C}
 name: Text
 key: text
-content-length: 104
+content-length: 107
 
-where contact has completed the [value, Tree, root=/sitecore/system/marketing control panel/goals] goal.
+where contact has completed the [value,Tree,root=/sitecore/system/Marketing Control Panel/Goals,name] goal.
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -56,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f07e135d-e299-422c-8a20-8a1ef55ad3cd
+78948095-7a46-43c4-89c2-b4237a52d3f8
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160616T042559Z
+20160624T012728Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

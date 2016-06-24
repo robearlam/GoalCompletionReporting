@@ -68,8 +68,7 @@
   <ItemGroup>
     <Compile Include="ConditionsUtility.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rules\SegmentBuilder\Conditions\GoalCondition.cs" />
-    <Compile Include="Rules\SegmentBuilder\Conditions\TypedQueryableStringOperatorCondition.cs" />
+    <Compile Include="Rules\SegmentBuilder\Conditions\HasContactCompletedGoal.cs" />
     <Compile Include="Search\GoalsCompletedField.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
