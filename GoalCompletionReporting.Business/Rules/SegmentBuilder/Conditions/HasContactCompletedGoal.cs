@@ -14,15 +14,15 @@ namespace GoalCompletionReporting.Business.Rules.SegmentBuilder.Conditions
 
         public HasContactCompletedGoal()
         {
-            this.OperatorId = ContainsOperatorId;
+            OperatorId = ContainsOperatorId;
         }
 
         protected override Expression<Func<IndexedContact, bool>> GetResultPredicate(T ruleContext)
         {
             ID valueAsId;
-            var parsedValueToId = ID.TryParse(this.Value, out valueAsId);
+            var parsedValueToId = ID.TryParse(Value, out valueAsId);
             ShortID valueAsShortId;
-            var parsedValueToShortId = ShortID.TryParse(this.Value, out valueAsShortId);
+            var parsedValueToShortId = ShortID.TryParse(Value, out valueAsShortId);
 
             if (!parsedValueToId && !parsedValueToShortId)
             {
@@ -35,7 +35,7 @@ namespace GoalCompletionReporting.Business.Rules.SegmentBuilder.Conditions
             }
 
             var idConvertedToString = valueAsId.Guid.ToString("N").ToLowerInvariant();
-            return this.GetCompareExpression(c => c[IndexField], idConvertedToString);
+            return GetCompareExpression(c => c[IndexField], idConvertedToString);
         }
     }
 }

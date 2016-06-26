@@ -11,8 +11,8 @@ namespace GoalCompletionReporting.Business.Search
 {
     public class GoalsCompletedField : IComputedIndexField
     {
+        private const string GoalsViewName = "goals";
         public string FieldName { get; set; }
-
         public string ReturnType { get; set; }
 
         public object ComputeFieldValue(IIndexable indexable)
@@ -25,16 +25,23 @@ namespace GoalCompletionReporting.Business.Search
             if (contactId == Guid.Empty)
                 return null;
 
-            var viewParams = new ViewParameters();
-            viewParams.ContactId = contactId;
-            viewParams.ViewName = "goals";
-            viewParams.ViewEntityId = null;
+            var viewParams = new ViewParameters
+            {
+                ContactId = contactId,
+                ViewName = GoalsViewName,
+                ViewEntityId = null
+            };
             var resultSet = CustomerIntelligenceManager.ViewProvider.GenerateContactView(viewParams);
 
-            return resultSet.Data.Dataset["goals"].Rows
+            return resultSet.Data.Dataset[GoalsViewName].Rows
                 .Cast<DataRow>()
-                .Select(dataRow => dataRow[2]) //column 2 is the goal id
+                .Select(GetGoalIdFromDataRow())
                 .Distinct();
+        }
+
+        private static Func<DataRow, object> GetGoalIdFromDataRow()
+        {
+            return dataRow => dataRow[2];
         }
     }
 }
