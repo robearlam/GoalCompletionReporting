@@ -1,0 +1,13 @@
+﻿@model GoalCompletionReporting.Web.Models.IdentifyUserModel
+
+<h2>Indetify User</h2>
+
+@using (Html.BeginRouteForm(Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName))
+{
+
+    @Html.TextBoxFor(x => x.Email, Model)
+    <input type="submit" value="Identify User" />
+}
+<p>
+    <b>@ViewBag.Message</b>
+</p>
